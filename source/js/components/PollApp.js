@@ -59,6 +59,8 @@ var PollApp = React.createClass({
       this.setState(info);
     }).on('add_question', (question) => {
       this.setState(question);
+    }).on('remove', (question) => {
+      this.setState(question);
     }).on('ask', (question) => {
       this.setState({
         currentQuestion: question,

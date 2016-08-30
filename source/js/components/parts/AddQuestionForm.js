@@ -9,9 +9,9 @@ var AddQuestionForm = React.createClass({
         <input type="text" placeholder="Type your question" ref="questionInput" className='form-control' />
         <label> Alternatives: </label>
         <p> A: </p> <input type="text" placeholder="Type an alternative" ref="aInput" className='form-control' />
-        <p> B: </p> <input type="text" placeholder="Type an alternative" ref="bInput" className='form-control' />
-        <p> C: </p> <input type="text" placeholder="Type an alternative" ref="cInput" className='form-control' />
-        <p> D: </p> <input type="text" placeholder="Type an alternative" ref="dInput" className='form-control' />
+        <p> B: </p> <input type="text" placeholder="Type an alternative" ref="bInput" className='form-control' /> 
+        <p> C: </p> <input type="text" placeholder="Type an alternative" ref="cInput" className='form-control' /> 
+        <p> D: </p> <input type="text" placeholder="Type an alternative" ref="dInput" className='form-control' /> 
         <button className="btn btn-primary"> Add question </button>
       </form>
     )

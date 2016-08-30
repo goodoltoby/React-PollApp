@@ -61,6 +61,10 @@ io.sockets.on('connection', function (socket) {
   }).on('add_question', (question) => {
     questions.push(question);
     io.sockets.emit('add_question', {questions});
+  }).on('remove', (index) => {
+    //console.log(index);
+    questions.splice(index, 1);
+    io.sockets.emit('remove', {questions});
   }).on('ask', (question) => {
     console.log(question.q);
     currentQuestion = question;

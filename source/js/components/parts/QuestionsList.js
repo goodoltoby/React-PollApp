@@ -5,11 +5,19 @@ var QuestionList = React.createClass({
     //console.log(question);
     this.props.emit('ask', question);
   },
+  remove: function(question){
+    var index = this.props.questions.indexOf(question);
+    //console.log(index);
+    this.props.emit('remove', index);
+  },
   render: function(){
     //console.log(this.props.questions);
     var multiQuestions = this.props.questions.map((question, i) =>{
       return(
-        <li key={i}><a href='#' onClick={this.ask.bind(this, question)}>{question.q}</a></li>
+        <li key={i}>
+          <a href='#' onClick={this.ask.bind(this, question)}>{question.q}</a>
+          <button onClick={this.remove.bind(this, question)}> X </button>
+        </li> 
       );
     });
 
